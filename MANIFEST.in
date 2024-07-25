@@ -1,4 +1,0 @@
-include LICENSE
-include README.rst
-recursive-include django_authx/static *
-recursive-include django_authx/templates *

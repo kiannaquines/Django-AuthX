@@ -4,9 +4,14 @@ Django-AuthX is a Django library designed to provide a flexible, customizable, e
 
 ## Quick start
 
-Download the package using `pip`
+Download the file in the releases
 ```
-pip install django-authx
+django_authx_system-0.0.1.tar.gz
+```
+
+Install the package using `pip`
+```
+pip install django_authx_system-0.0.1.tar.gz
 ```
 
 Add `authx` to your `INSTALLED_APPS` list in your Django.

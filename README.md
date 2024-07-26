@@ -7,7 +7,7 @@ Download the file in the releases section.
 
 Install the package using `pip`
 ```
-pip install django_authx_system-0.0.1.tar.gz
+pip install django_authx_system-0.0.1a0.tar.gz
 ```
 
 Add `authx` to your `INSTALLED_APPS` list in your Django.

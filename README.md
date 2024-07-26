@@ -13,7 +13,7 @@ Download the package using `pip`
 pip install django-authx
 ```
 
-Add `'authx'` to your `INSTALLED_APPS` list in your Django
+Add `authx` to your `INSTALLED_APPS` list in your Django.
 
 ```
 INSTALLED_APPS = [..., 'authx',...]
@@ -21,7 +21,9 @@ INSTALLED_APPS = [..., 'authx',...]
 
 Run migrations
 
-```python manage.py migrate```
+```
+python manage.py migrate
+```
 
 Add the Django-Authx custom model in the AUTH_USER_MODEL in the 
 
@@ -34,5 +36,4 @@ AUTH_USER_MODEL = 'authx.AuthXUserModel'
 ## Features
 
 * User Registration: Simplified user registration process with customizable forms and views.
-
-* Login and Logout: Secure and customizable login and logout functionality, with support for various authentication methods.
+* Login and Logout: Secure and customizable login and logout functionality.

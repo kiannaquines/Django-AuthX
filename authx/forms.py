@@ -1,9 +1,9 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from .authX_models import AuthXAppUserModel
+from .models import AuthXUserModel
 from django.contrib.auth.forms import UserCreationForm
 
-class AuthXLoginUserForm(forms.Form):
+class AuthXLoginForm(forms.Form):
     username = forms.CharField(
         widget=forms.TextInput(
             attrs={
@@ -25,15 +25,15 @@ class AuthXLoginUserForm(forms.Form):
         required=True
     )
 
-class AuthXRegisterUserForm(UserCreationForm):
+class AuthXRegisterForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
-        super(AuthXRegisterUserForm, self).__init__(*args, **kwargs)
+        super(AuthXRegisterForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update({'class': 'form-control'})
         self.fields['email'].widget.attrs.update({'class': 'form-control'})
 
     class Meta:
-        model = AuthXAppUserModel
+        model = AuthXUserModel
         fields = ['username','email',]
 
     def __init__(self, *args, **kwargs):

@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .authX_models import AuthXAppUserModel
+from .models import AuthXUserModel
 from django.contrib.auth.admin import UserAdmin as OriginalAdmin
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.models import User
 
+class AuthXUserAdmin(OriginalAdmin):
 
-class AuthXAppUserAdmin(OriginalAdmin):
-
-    list_display = ("id", "username", "email", "date_joined", "last_login")
+    list_display = ("username", "email", "last_login","is_superuser", "is_staff", "is_active",)
 
     list_display_links = ("username",)
     list_per_page = 25
@@ -70,5 +70,4 @@ class AuthXAppUserAdmin(OriginalAdmin):
         ),
     )
 
-
-admin.site.register(AuthXAppUserModel, AuthXAppUserAdmin)
+admin.site.register(AuthXUserModel, AuthXUserAdmin)

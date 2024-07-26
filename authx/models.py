@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser, Group, Permission
 from datetime import datetime
 
-class AuthXAppUserModel(AbstractUser):
+class AuthXUserModel(AbstractUser):
     groups = models.ManyToManyField(
         Group,
         verbose_name='groups',
@@ -17,7 +17,6 @@ class AuthXAppUserModel(AbstractUser):
         help_text='Specific permissions for this user.',
         related_name='authx_users_permissions'
     )
-
     first_name = models.CharField(
         max_length=50,
         unique=False,
@@ -100,7 +99,8 @@ class AuthXAppUserModel(AbstractUser):
         db_table = "authx_user"
         verbose_name = "User"
         verbose_name_plural = "Users"
-
+        ordering = ('-date_joined',)
+        
     def __str__(self) -> str:
         return self.username
     

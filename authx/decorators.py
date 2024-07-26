@@ -1,4 +1,4 @@
-from .authX_settings import AUTHX_SETTINGS
+from .settings import AUTHX_SETTINGS
 from django.shortcuts import redirect
 
 def already_logged_in(view_func):
@@ -6,6 +6,6 @@ def already_logged_in(view_func):
         if not request.user.is_authenticated:
             return view_func(request, *args, **kwargs)
         else:
-            return redirect(AUTHX_SETTINGS['AUTHX_LOGIN_URL'])
+            return redirect(AUTHX_SETTINGS['AUTHX_LOGIN_NAME'])
     
     return wrapper_func

@@ -4,18 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-authx-system"
-version = "0.0.1"
+version = "0.0.1a"
 description = "Django-AuthX is a Django library designed to provide a simple authentication system."
-readme = "README.rst"
-license = {file = "LICENSE"}
-authors = [
-    {name = "Kian Naquines"},
-]
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Kian Naquines" }]
 
-dependencies = [
-    "Django>=5.0",
-    "Pillow",
-]
+dependencies = ["Django>=5.0", "Pillow"]
 
 requires-python = ">=3.11"
 
@@ -26,4 +21,3 @@ include = ["authx*"]
 [project.urls]
 homepage = "https://github.com/kiannaquines/Django-AuthX/"
 repository = "https://github.com/kiannaquines/Django-AuthX.git"
-

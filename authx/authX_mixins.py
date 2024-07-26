@@ -1,6 +1,6 @@
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from authX.authX_settings import AUTHX_SETTINGS
+from .authX_settings import AUTHX_SETTINGS
 
 class LoginRequiredMixin:
     redirect_url = reverse_lazy(AUTHX_SETTINGS['AUTHX_LOGIN_URL'])

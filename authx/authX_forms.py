@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from authX.authX_models import AuthXAppUserModel
+from .authX_models import AuthXAppUserModel
 from django.contrib.auth.forms import UserCreationForm
 
 class AuthXLoginUserForm(forms.Form):

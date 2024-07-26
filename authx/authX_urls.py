@@ -1,6 +1,6 @@
 from django.urls import path
-from authX.authX_views import AuthXRegisterView, AuthXLoginView,AuthXLogoutView
-from authX.authX_settings import AUTHX_SETTINGS
+from .authX_views import AuthXRegisterView, AuthXLoginView,AuthXLogoutView
+from .authX_settings import AUTHX_SETTINGS
 
 urlpatterns = [
     path(AUTHX_SETTINGS['AUTHX_LOGIN_URL'],AuthXLoginView.as_view(),name="authX_login"),

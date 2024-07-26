@@ -1,5 +1,5 @@
 from django.contrib import admin
-from authX.authX_models import AuthXAppUserModel
+from .authX_models import AuthXAppUserModel
 from django.contrib.auth.admin import UserAdmin as OriginalAdmin
 from django.utils.translation import gettext_lazy as _
 

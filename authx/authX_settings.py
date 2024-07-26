@@ -1,5 +1,5 @@
 from django.conf import settings
-from authX.authX_constants import AUTHX_CONSTANT_CONFIGS
+from .authX_constants import AUTHX_CONSTANT_CONFIGS
 
 AUTHX_SETTINGS =  {
     'AUTHX_USER_MODEL': getattr(settings,'AUTHX_USER_MODEL', AUTHX_CONSTANT_CONFIGS['AUTHX_USER_MODEL']),

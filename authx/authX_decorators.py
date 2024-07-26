@@ -1,4 +1,4 @@
-from authX.authX_settings import AUTHX_SETTINGS
+from .authX_settings import AUTHX_SETTINGS
 from django.shortcuts import redirect
 
 def already_logged_in(view_func):

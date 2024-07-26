@@ -9,7 +9,9 @@ Django-AuthX enhances and extends authentication features, allowing developers t
 
 Download the package using `pip`
 
-```pip install django-authx```
+```
+pip install django-authx
+```
 
 Add `'authx'` to your `INSTALLED_APPS` list in your Django
 

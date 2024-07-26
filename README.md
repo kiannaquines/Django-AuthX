@@ -25,7 +25,7 @@ Run migrations
 python manage.py migrate
 ```
 
-Add the Django-Authx custom model in the AUTH_USER_MODEL in the 
+Add the Django-AuthX custom model in the `AUTH_USER_MODEL` in the 
 
 You can start using Django-Authx in your Django application settings.py
 
@@ -35,5 +35,5 @@ AUTH_USER_MODEL = 'authx.AuthXUserModel'
 
 ## Features
 
-* User Registration: Simplified user registration process with customizable forms and views.
+* User Registration: Simplified user registration process.
 * Login and Logout: Secure and customizable login and logout functionality.

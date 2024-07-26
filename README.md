@@ -1,8 +1,6 @@
 # Django-AuthX
 
-
 Django-AuthX is a Django library designed to provide a flexible, customizable, easy-to-integrate authentication system for Django applications. 
-Django-AuthX enhances and extends authentication features, allowing developers to manage user authentication and authorization processes efficiently.
 
 ## Quick start
 

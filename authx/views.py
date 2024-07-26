@@ -7,9 +7,11 @@ from .mixins import RedirectIfAuthenticatedMixin
 from django.urls import reverse_lazy
 
 class AuthXRegisterView(RedirectIfAuthenticatedMixin, FormView):
-    template_name = 'register.html'
     form_class = AuthXRegisterForm
     success_url = reverse_lazy(AUTHX_SETTINGS['AUTHX_LOGIN_NAME'])
+
+    def get_template_names(self):
+        return [AUTHX_SETTINGS['AUTHX_REGISTER_TEMPLATE']]
     
     def form_valid(self, form):
         user = form.save(commit=False)
@@ -20,12 +22,13 @@ class AuthXRegisterView(RedirectIfAuthenticatedMixin, FormView):
 class AuthXLogoutView(LogoutView):
     next_page = reverse_lazy(AUTHX_SETTINGS['AUTHX_LOGIN_NAME'])
 
-
 class AuthXLoginView(RedirectIfAuthenticatedMixin, FormView):
-    template_name = 'login.html'
     form_class = AuthXLoginForm
     success_url = reverse_lazy(AUTHX_SETTINGS['AUTHX_SUCCESS_NAME'])
 
+    def get_template_names(self):
+        return [AUTHX_SETTINGS['AUTHX_LOGIN_TEMPLATE']]
+    
     def form_valid(self, form):
         username = form.cleaned_data['username']
         password = form.cleaned_data['password']
